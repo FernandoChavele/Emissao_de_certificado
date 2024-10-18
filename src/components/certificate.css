@@ -1,0 +1,81 @@
+
+
+.certificate {
+    position: relative;
+    /* background-color: white; */
+    background-image: url('./img/BackgroundFrente.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 40px; 
+    width: 210mm; 
+    height: 297mm; 
+    margin: auto;
+    text-align: justify; 
+    border: 1px solid #047C4A;
+    border-radius: 2rem;
+    font-family: 'Arial', sans-serif; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.logo {
+    width: 150px; 
+    margin-bottom: 100px; 
+    margin-top: 20px; 
+}
+
+h2 {
+    text-align: center; 
+    font-size: 5em !important;
+    font-family: 'Times New Roman', Times, serif; 
+    padding-bottom: 5x; 
+    color: #047C4A;
+}
+
+.certificate-details p {
+    font-size: 1.2em;
+    width: 35rem;
+    line-height: 2rem;
+    text-align: center; 
+}
+
+.director-signature p {
+    font-size: 1.2em; 
+    text-align: center; 
+}
+
+.director-signature {
+    margin-top: 80px;
+    text-align: center; 
+    width: 100%;
+}
+
+.signature-line {
+    margin: 20px 0; 
+}
+
+#generate-pdf-button {
+    margin-top: 20px; 
+    padding: 10px 20px; 
+    background-color: #047C4A;
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+#generate-pdf-button:hover {
+    background: #022919;
+   
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        zoom: 90%;
+    }
+}

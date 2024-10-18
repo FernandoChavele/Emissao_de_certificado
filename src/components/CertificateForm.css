@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* background: linear-gradient(90deg, rgba(249,216,85,1) 0%, rgba(4,124,74,1) 100%, rgba(0,212,255,1) 100%); */
+
+     background-image: url(https://uem.mz/wp-content/uploads/slider/cache/d73e7eaaaa293758c8a10fc163d4e149/Slide-01-scaled.jpg);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(6px); 
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #047c4a79; 
+    z-index: -1;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    /* background: linear-gradient(90deg, rgba(249,216,85,1) 0%, rgba(4,124,74,1) 100%, rgba(0,212,255,1) 100%);; */
+    background-color: rgb(214, 241, 218);
+    padding: 40px;
+    border-radius: 1rem;
+    margin-top: 4rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.Emitir {
+    font-size: 2rem;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+    color: #047C4A;
+}
+
+
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+button {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1.5px solid  rgb(214, 241, 218);
+    border-radius: 0.5rem;
+    font-size: 17px;
+
+}
+
+
+input:focus {
+    border-bottom:1px solid #047C4A; 
+    outline: none; 
+  }
+
+button {
+    margin: 20px 10px;
+    background-color: #047C4A;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 50%;
+    border-style: double;
+    align-self: center;
+}
+
+button:hover {
+    background: #022919;
+    
+}
+
