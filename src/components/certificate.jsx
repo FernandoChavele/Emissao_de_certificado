@@ -1,10 +1,10 @@
 import React from 'react';
-// import jsPDF from 'jspdf';
-// import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 import './Certificate.css';
-import logo from './img/LogoUEM.png'; 
+import logo from './img/Emondlane.jpg'; 
 
-const Certificate = ({ studentName, studentNumber, directorName }) => {
+const Certificate = ({ studentName, biNumber, iAuthority, courseName, hours, startDate, endDate, city, province, directorName }) => {
     
     const generatePDF = () => {
         const input = document.getElementById('certificate');
@@ -33,22 +33,30 @@ const Certificate = ({ studentName, studentNumber, directorName }) => {
         <div id="certificate" className="certificate">
             <img src={logo} alt="Logo da UEM" className="logo" />
             <h2>UNIVERSIDADE EDUARDO MONDLANE</h2>
-            <h1>Diploma</h1>
+            <h1 className="diploma">Diploma</h1>
             <div className="certificate-details">
-                <p>
+                 <p>
                     Eu,<strong>{directorName}</strong> 
+                    <br/>
                     Reitor da Universidade Eduardo Mondlane
+                    <br/>
                     Faço saber que
-                    que <strong>{studentName}</strong>, 
+                    <br/>
+                    <strong>{studentName}</strong>
+                    <br/> 
                     tendo frequentado a 
+                    <br/>
                     <strong>Faculdade de -nomde da faculdade</strong> 
+                    <br/>
                     Concluiu, em - <strong>{startDate}</strong> - <strong>{endDate}</strong>
+                    <br/>
                     o curso de - <strong>{courseName}</strong> 
+                    <br/>
                     pelo que, em conformidade com as disposições legais em vigor, lhe mandei passar o 
                     presente Diploma em que o/a declaro habilitado/a com o grau de <strong>Licenciatura</strong>
                     com a classificação de - <strong>nota final</strong> valores
                     
-                </p>
+                </p> 
             </div>
             <div className="director-signature">
                 <p>Diretor da Faculdade</p>

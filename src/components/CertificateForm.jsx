@@ -27,7 +27,7 @@ const CertificateForm = () => {
                     required
                 />
                 <input
-                    type="text"
+                    type="number"
                     placeholder="Número do Estudante"
                     value={studentNumber}
                     onChange={(e) => setStudentNumber(e.target.value)}

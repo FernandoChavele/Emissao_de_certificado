@@ -2,7 +2,6 @@
 
 .certificate {
     position: relative;
-    /* background-color: white; */
     background-image: url('./img/BackgroundFrente.jpg'); 
     background-size: cover; 
     background-position: center; 
@@ -26,12 +25,17 @@
     margin-top: 20px; 
 }
 
+.diploma{
+    font-family: Old English Text MT;
+    text-transform: capitalize;
+    font-size: 4em;
+}
 h2 {
     text-align: center; 
-    font-size: 5em !important;
+    font-size: 2em !important;
     font-family: 'Times New Roman', Times, serif; 
     padding-bottom: 5x; 
-    color: #047C4A;
+    color: #020f0a;
 }
 
 .certificate-details p {
