@@ -2,13 +2,14 @@ import React from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import './Certificate.css';
-import logo from './img/Emondlane.jpg'; 
+import logo from './img/Emblema.png'; 
 
-const Certificate = ({ studentName, biNumber, iAuthority, courseName, hours, startDate, endDate, city, province, directorName }) => {
+const Certificate = ({ studentName, biNumber, directorName, }) => {
     
     const generatePDF = () => {
         const input = document.getElementById('certificate');
-        
+        const dataemiss = document.getdata();
+
         const button = document.getElementById('generate-pdf-button');
         button.style.display = 'none';
 
@@ -54,16 +55,12 @@ const Certificate = ({ studentName, biNumber, iAuthority, courseName, hours, sta
                     <br/>
                     pelo que, em conformidade com as disposições legais em vigor, lhe mandei passar o 
                     presente Diploma em que o/a declaro habilitado/a com o grau de <strong>Licenciatura</strong>
-                    com a classificação de - <strong>nota final</strong> valores
-                    
+                    com a classificação de - <strong>nota final</strong> valores    
                 </p> 
-            </div>
-            <div className="director-signature">
-                <p>Diretor da Faculdade</p>
-                <div className="signature-line">_____________________________________</div>
-                <p><strong>{directorName}</strong></p>
-            </div>
 
+                <p> Maputo, {data}</p>
+
+            </div>
             <button id="generate-pdf-button" onClick={generatePDF}>Gerar PDF</button>
         </div>
     );

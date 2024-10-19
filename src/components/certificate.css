@@ -2,37 +2,42 @@
 
 .certificate {
     position: relative;
-    background-image: url('./img/BackgroundFrente.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    padding: 40px; 
-    width: 210mm; 
-    height: 297mm; 
-    margin: auto;
-    text-align: justify; 
-    border: 1px solid #047C4A;
-    border-radius: 2rem;
-    font-family: 'Arial', sans-serif; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
+    max-width: 800px;
+    margin: 0 auto;
+    background-image: url('./img/Diploma-PNG.png'); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 30px; 
+    width: 210mm; 
+    height: 297mm; 
+    box-sizing: border-box;
+    text-align: justify;
+    text-align: center;   
+    border: 1px solid #047C4A;
+    font-family: 'Calisto MT', sans-serif; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
 .logo {
-    width: 150px; 
-    margin-bottom: 100px; 
-    margin-top: 20px; 
+    width: 120px; 
+    margin-top: 10px; 
+    max-width: 100%;
+    height: auto;
+    
 }
 
 .diploma{
+    margin-bottom: 50px; 
     font-family: Old English Text MT;
     text-transform: capitalize;
     font-size: 4em;
 }
 h2 {
     text-align: center; 
-    font-size: 2em !important;
+    font-size: 1.7em !important;
     font-family: 'Times New Roman', Times, serif; 
     padding-bottom: 5x; 
     color: #020f0a;
@@ -41,23 +46,10 @@ h2 {
 .certificate-details p {
     font-size: 1.2em;
     width: 35rem;
-    line-height: 2rem;
-    text-align: center; 
-}
+    text-align: center;   
+    line-height: 2em; 
+    margin: 10px 0;
 
-.director-signature p {
-    font-size: 1.2em; 
-    text-align: center; 
-}
-
-.director-signature {
-    margin-top: 80px;
-    text-align: center; 
-    width: 100%;
-}
-
-.signature-line {
-    margin: 20px 0; 
 }
 
 #generate-pdf-button {
@@ -69,11 +61,34 @@ h2 {
     border-radius: 5px;
     cursor: pointer; 
     font-size: 16px; 
+    position: relative;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 #generate-pdf-button:hover {
     background: #022919;
    
+}
+#voltar {
+    background: transparent;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#voltar:hover {
+    background-color: #ffffff;
+    color: #000000;
+    
 }
 
 @media print {
@@ -81,5 +96,40 @@ h2 {
         margin: 0;
         padding: 0;
         zoom: 90%;
+    }
+}
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+    .certificate {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .diploma {
+        font-size: 2em;  
+    }
+
+    .certificate-details {
+        font-size: 1em;  
+    }
+
+    button {
+        width: 100%;    
+        font-size: 1em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .diploma {
+        font-size: 1.5em; 
+    }
+
+    .certificate-details {
+        font-size: 0.9em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 16px; 
     }
 }

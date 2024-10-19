@@ -15,10 +15,8 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    
-    /* background: linear-gradient(90deg, rgba(249,216,85,1) 0%, rgba(4,124,74,1) 100%, rgba(0,212,255,1) 100%); */
 
-     background-image: url(https://uem.mz/wp-content/uploads/slider/cache/d73e7eaaaa293758c8a10fc163d4e149/Slide-01-scaled.jpg);
+    background-image: url(https://uem.mz/wp-content/uploads/slider/cache/d73e7eaaaa293758c8a10fc163d4e149/Slide-01-scaled.jpg);
 
     background-size: cover;
     background-position: center;
@@ -42,13 +40,15 @@ body::after {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px; 
 }
 
 form {
     display: flex;
     flex-direction: column;
     margin: 20px 0;
-    /* background: linear-gradient(90deg, rgba(249,216,85,1) 0%, rgba(4,124,74,1) 100%, rgba(0,212,255,1) 100%);; */
     background-color: rgb(214, 241, 218);
     padding: 40px;
     border-radius: 1rem;
@@ -61,29 +61,27 @@ form {
     font-size: 2rem;
     font-weight: 500;
     padding-bottom: 1.5rem;
-    color: #047C4A;
+    color: #04663d;
 }
 
 
-
-input[type="text"],
-input[type="number"],
-input[type="date"],
-select,
-button {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1.5px solid  rgb(214, 241, 218);
-    border-radius: 0.5rem;
-    font-size: 17px;
+input {
+    width: 100%; 
+    background-color: rgb(214, 241, 218);
+    max-width: 400px; 
+    margin-bottom: 10px;
+    align-self: center; 
+    text-align: center;       
+    padding: 8px 0;
+    box-sizing: border-box;
 
 }
-
 
 input:focus {
-    border-bottom:1px solid #047C4A; 
-    outline: none; 
-  }
+    border: none;          
+    border-bottom: 2px solid #000; 
+    outline: none;         
+}
 
 button {
     margin: 20px 10px;
@@ -92,9 +90,9 @@ button {
     border: none;
     border-radius: 7px;
     cursor: pointer;
-    width: 50%;
     border-style: double;
     align-self: center;
+    font-size: 16px;
 }
 
 button:hover {
@@ -102,3 +100,42 @@ button:hover {
     
 }
 
+@media (max-width: 768px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    input {
+        width: 100%; 
+        max-width: 300px;
+    }
+
+    button {
+        font-size: 14px; 
+    }
+}
+
+input {
+    width: 80%;
+    padding: 1rem; 
+}
+
+button {
+    padding: 1em 2em;
+    font-size: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
